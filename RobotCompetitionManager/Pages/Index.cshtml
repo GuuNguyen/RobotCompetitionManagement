@@ -62,7 +62,11 @@
                                 <td>@Html.DisplayFor(modelItem => item.Code)</td>
                                 <td>@Html.DisplayFor(modelItem => item.Name)</td>
                                 <td>@Html.DisplayFor(modelItem => item.SchoolName)</td>
-                                <td>@(item.Status == 1 || item.Status == 0 ? "Not yet" : item.Status == 2 ? "Playing" : "Finished")</td>
+                                <td style="color:
+            @(item.Status == 1 || item.Status == 0 ? "gray" 
+              : item.Status == 2 ? "green"
+              : "navy"
+            ); font-weight:bolder" >@(item.Status == 1 || item.Status == 0 ? "Not yet" : item.Status == 2 ? "Playing" : "Finished")</td>
                                 <td>
                                     @*<button class="btn btn-warning">
                                         <a style="text-decoration: none; color: #ffffff" asp-page="./TeamPage/Update" asp-route-id="@item.keyId">Update</a>
