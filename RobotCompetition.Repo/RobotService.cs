@@ -110,6 +110,10 @@ public class RobotService : IRobotService
     {
         List<ScoreDTO> scores = GetScores();
         List<ScoreDTO> results = new List<ScoreDTO>();
+        if(scores == null)
+        {
+            return null;
+        }
         foreach (var item in scores)
         {
             if (item.CheckpointCode.Equals(CheckpointCode))
@@ -200,7 +204,7 @@ public class RobotService : IRobotService
         TeamDTO team = getTeamById(teamId);
         List<ScoreDTO> scores = GetScoreByTeamCode(team.Code.ToString());
         client.Delete("team/" + teamId);
-        if (!(scores.Count() > 0))
+        if (scores == null)
         {
             return;
         }
@@ -225,7 +229,7 @@ public class RobotService : IRobotService
         CheckpointDTO checkpoint = getCheckPointById(checkpointId);
         List<ScoreDTO> scores = GetScoreByCheckPointCode(checkpoint.Code);
         client.Delete("checkpoint/" + checkpointId);
-        if (!(scores.Count() > 0))
+        if (scores == null)
         {
             return;
         }
