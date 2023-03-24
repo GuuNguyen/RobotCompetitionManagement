@@ -1,0 +1,70 @@
+﻿@page
+@model RobotCompetitionManager.Pages.DashboardPage.IndexModel
+@{
+    int index = 0;
+    int rank = 0;
+    var sortedTeams = Model.Teams.OrderByDescending(t => Model.listScore.Where(s => s.TeamCode == t.Code).Sum(s => s.ScoreValue));
+}
+
+<h1 style="text-align: center; font-weight:bolder; color: #002d72">Dashboard</h1>
+<div style="display: flex; justify-content:space-between; margin: 0 10px 20px 10px">
+    <button class="btn btn-primary">
+        <a style="text-decoration: none; color: #FFFFFF" asp-page="Create">Create New</a>
+    </button>
+    @*<form method="post">
+           <button class="btn btn-danger" type="submit">Reset All</button>
+    </form>*@
+</div>
+<section class="intro">
+  <div class="bg-image h-100" style="background-color: #f5f7fa;">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="justify-content-center">
+          <div>
+            <div class="card">
+              <div class="card-body p-0">
+                <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 520px">
+                  <table class="table table-striped mb-0">
+                    <thead style="background-color: #002d72; color: #fff">
+                      <tr style="text-align:center">
+                        @*<th scope="col"> STT</th>*@
+                        <th scope="col"> Rank</th>
+                        <th scope="col"> Ten</th>
+                        <th scope="col"> School Name</th>
+                        @foreach (var item in Model.Checkpoints) {
+                            <th>@Html.DisplayFor(modelItem => item.Name)</th>
+                         }  
+                         <th>Tong diem</th>     
+				       </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var team in sortedTeams) {
+                             int totalScore = 0;
+                             rank++;
+                             <tr style="text-align:center; @(rank == 1 ? "background-color: #FFFF00;" : rank == 2 ? "background-color: #C0C0C0;" : rank == 3 ? "background-color: #CD7F32;" : "")">
+                                    @*<td>@index</td>*@
+                                    <td>Rank @rank</td>
+                                     <td>@Html.DisplayFor(modelItem => team.Name)</td>
+                                     <td>@Html.DisplayFor(modelItem => team.SchoolName)</td>
+                                         @foreach (var teamCheckpint in Model.Checkpoints) {
+                                                  var score = Model.listScore.Where(s => s.TeamCode == team.Code 
+                                                        && s.CheckpointCode == teamCheckpint.Code).FirstOrDefault();
+                                                  var scoreValue = (score == null) ? 0 : score.ScoreValue;
+                                                  totalScore += scoreValue;
+                                         <td>@scoreValue</td>
+                                    }
+                                   <td>@totalScore</td>                       
+                             </tr>         
+                         }            
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

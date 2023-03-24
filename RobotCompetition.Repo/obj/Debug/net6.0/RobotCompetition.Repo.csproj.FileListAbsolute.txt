@@ -1,0 +1,12 @@
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\bin\Debug\net6.0\RobotCompetition.Repo.deps.json
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\bin\Debug\net6.0\RobotCompetition.Repo.dll
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\bin\Debug\net6.0\RobotCompetition.Repo.pdb
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\RobotCompetition.Repo.csproj.AssemblyReference.cache
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\RobotCompetition.Repo.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\RobotCompetition.Repo.AssemblyInfoInputs.cache
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\RobotCompetition.Repo.AssemblyInfo.cs
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\RobotCompetition.Repo.csproj.CoreCompileInputs.cache
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\RobotCompetition.Repo.dll
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\refint\RobotCompetition.Repo.dll
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\RobotCompetition.Repo.pdb
+E:\Project\C# Project\TestConnectRealtimeDb\RobotCompetition.Repo\obj\Debug\net6.0\ref\RobotCompetition.Repo.dll
